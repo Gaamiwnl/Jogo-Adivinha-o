@@ -8,11 +8,18 @@ int main() {
     cout << "**********************" << endl;
     
     const int NUMERO_SECRETO = 42;
+
     bool naoAcertou = true;
+    int tentativas = 0;
+
+
     while(naoAcertou){
         int numeroChute;
+
+        cout <<"tentativas: " << tentativas << endl;
         cout << "qual o seu chute? ";
         cin >> numeroChute;
+        tentativas++;
         cout << "O valor do seu chute e: " << numeroChute << endl;
 
         bool acertou = numeroChute == NUMERO_SECRETO;
@@ -30,4 +37,6 @@ int main() {
     }
     
     cout << "Fim de Jogo" << endl;
+    cout << "Voce ganhou o jogo com: " << tentativas << " tentativas" << endl;
+
 }
