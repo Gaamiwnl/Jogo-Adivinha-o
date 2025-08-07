@@ -1,5 +1,6 @@
 #include <iostream>
-
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 int main() {
@@ -21,7 +22,9 @@ int main() {
     } else {
         numero_de_tentativas = 5;
     }
-    const int NUMERO_SECRETO = 42;
+
+    srand(time(NULL));
+    const int NUMERO_SECRETO = rand() % 100;
       
     bool naoAcertou = true;
     int tentativas = 0;
