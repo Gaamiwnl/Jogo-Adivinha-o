@@ -1,4 +1,5 @@
-#include<iostream>
+#include <iostream>
+
 using namespace std;
 
 int main() {
@@ -6,8 +7,25 @@ int main() {
     cout << "* Jogo da Adivinhacao *" << endl;
     cout << "**********************" << endl;
     
-    int numero_secreto = 42;
-    cout << "o numero secreto e " <<  numero_secreto << " nao conte para ninguem" << endl;
+    const int NUMERO_SECRETO = 42;
 
+    int numeroChute;
+    cout << "qual o seu chute? ";
+    cin >> numeroChute;
+    cout << "O valor do seu chute e: " << numeroChute << endl;
+
+
+    bool acertou = numeroChute == NUMERO_SECRETO;
+    bool maior = numeroChute > NUMERO_SECRETO;
+
+    if(acertou){
+        cout << "parabens, voce acertou o numero secreto" << endl;
+    }
+    else if (maior){
+        cout << "seu chute foi maior que o numero secreto" << endl;
+    }
+    else {
+        cout << "seu chute foi menor que o numero secreto" << endl;
+    }
 
 }
